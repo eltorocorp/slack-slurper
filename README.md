@@ -1,2 +1,2 @@
 # slack-slurper
-extarcting comments from slack channel 
+extracting comments from slack channel 
