@@ -1,15 +1,15 @@
-from slackclient import SlackClient
+import Slack
 import os
 import array
 
-#slack_token = os.environ["SLACK_API_TOKEN"]
-#print(slack_token)
-sc = SlackClient('T0GRT2TH8')
-channel = "adops"
+slack_token = os.environ["SLACK_TOKEN"]
+print(slack_token)
+sc = slack.WebClient(token=slack_token)
+channel_name = "adops"
 timestamp = None
 
 def history():
-        history_call = sc.api_call("channels.history",channel=channel,latest=timestamp,oldest = 0,count=1500)
+        history_call = sc.api_call("channels.history", channel=channel_name, latest=timestamp, oldest=0, count=1500)
         print(history_call)
         if history_call.get('ok'):
                 history=history_call['messages']
