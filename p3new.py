@@ -9,7 +9,7 @@ channel = "adops"
 timestamp = None
 
 def history():
-        history_call = sc.api_call("channels.history",channel=channel,latest=timestamp,oldest = 0,count=1000)
+        history_call = sc.api_call("channels.history",channel=channel,latest=timestamp,oldest = 0,count=1500)
         print(history_call)
         if history_call.get('ok'):
                 history=history_call['messages']
