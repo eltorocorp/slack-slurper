@@ -1,4 +1,4 @@
-import Slack
+import slack
 import os
 import array
 
