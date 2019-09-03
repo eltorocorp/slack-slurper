@@ -4,14 +4,14 @@ import os
 import array
 
 slack_token = os.environ["SLACK_TOKEN"]
-#print(slack_token)
 sc = slack.WebClient(token=slack_token)
 
 def list_channels():
-    channels = sc.channels_list()
+    response = sc.conversations_list()
+    channels = response.data["channels"]
+    channels.sort(key=lambda c: c["name"])
     for channel in channels:
-        channel = 'adops'
-        print(channel)
+        print(channel["name"])
 
 list_channels()
 
