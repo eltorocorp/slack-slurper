@@ -4,7 +4,7 @@ import array
 
 #slack_token = os.environ["SLACK_API_TOKEN"]
 #print(slack_token)
-sc = SlackClient('T0GRT2TH8')
+sc = SlackClient('token')
 channel = "adops"
 timestamp = None
 
