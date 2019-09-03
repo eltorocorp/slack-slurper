@@ -13,7 +13,7 @@ def list_channels():
         channel = 'adops'
         print(channel)
 
-#list_channels()
+list_channels()
 
 
 
